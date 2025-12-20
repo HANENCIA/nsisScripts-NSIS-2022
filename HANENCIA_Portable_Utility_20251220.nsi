@@ -37,7 +37,7 @@
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 OutFile "HANENCIA Portable Utility 20251220 (다중 언어).exe"
-InstallDir "Portable"
+InstallDir "C:\Portable"
 #InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
 ShowUnInstDetails show
