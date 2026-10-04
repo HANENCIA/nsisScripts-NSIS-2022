@@ -299,6 +299,7 @@ Section "Image-Health" SEC09
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
+  CreateShortCut "$SMPROGRAMS\HANENCIA Portable Utility\Image-Health.lnk" "$INSTDIR\Image-Health\ImageHealth.cmd"
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
