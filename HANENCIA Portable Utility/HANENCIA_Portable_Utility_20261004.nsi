@@ -411,12 +411,13 @@ SectionEnd
 
 Section "RemoveGhosts" SEC14
   SetOutPath "$INSTDIR\RemoveGhosts"
+  File "RemoveGhosts\RemoveGhosts.exe"
   File "RemoveGhosts\RemoveGhosts.ps1"
-  File "RemoveGhosts\run.cmd"
   File "RemoveGhosts\荤侩 规过.pdf"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
+  CreateShortCut "$SMPROGRAMS\HANENCIA Portable Utility\RemoveGhosts.lnk" "$INSTDIR\RemoveGhosts\RemoveGhosts.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
@@ -742,7 +743,7 @@ Section Uninstall
   Delete "$INSTDIR\R-Studio\App\RStudio\avcodec-57.dll"
   Delete "$INSTDIR\Ridirm\Ridirm.exe"
   Delete "$INSTDIR\RemoveGhosts\荤侩 规过.pdf"
-  Delete "$INSTDIR\RemoveGhosts\run.cmd"
+  Delete "$INSTDIR\RemoveGhosts\RemoveGhosts.exe"
   Delete "$INSTDIR\RemoveGhosts\RemoveGhosts.ps1"
   Delete "$INSTDIR\nosx\README.markdown"
   Delete "$INSTDIR\nosx\nosx.hta"
@@ -969,6 +970,7 @@ Section Uninstall
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\Rufus.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\RStudio.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\Ridirm.lnk"
+  Delete "$SMPROGRAMS\HANENCIA Portable Utility\RemoveGhosts.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\nosx.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\Image-Health.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\Hitomi Downloader.lnk"
