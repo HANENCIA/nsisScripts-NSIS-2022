@@ -64,7 +64,47 @@ Section "자소 합치기2" SEC01
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "Autoruns 14.11" SEC02
+Section "AudioTester 1.7" SEC02
+  SetOutPath "$INSTDIR\AudioTester"
+  File "AudioTester\AudioTester.exe"
+  File "AudioTester\AudioTester64.exe"
+  File "AudioTester\readme.txt"
+  SetOutPath "$INSTDIR\AudioTester\AudioTesterSrc"
+  File "AudioTester\AudioTesterSrc\AudioTester.cpp"
+  File "AudioTester\AudioTesterSrc\AudioTester.h"
+  File "AudioTester\AudioTesterSrc\AudioTester.ico"
+  File "AudioTester\AudioTesterSrc\AudioTester.rc"
+  File "AudioTester\AudioTesterSrc\AudioTester.sln"
+  File "AudioTester\AudioTesterSrc\AudioTester.vcxproj"
+  File "AudioTester\AudioTesterSrc\AudioTester.vcxproj.filters"
+  File "AudioTester\AudioTesterSrc\Decoders.cpp"
+  File "AudioTester\AudioTesterSrc\Decoders.h"
+  File "AudioTester\AudioTesterSrc\FlacDecoder.cpp"
+  File "AudioTester\AudioTesterSrc\FlacDecoder.h"
+  File "AudioTester\AudioTesterSrc\md5.c"
+  File "AudioTester\AudioTesterSrc\md5.h"
+  File "AudioTester\AudioTesterSrc\MP3Decoder.cpp"
+  File "AudioTester\AudioTesterSrc\MP3Decoder.h"
+  File "AudioTester\AudioTesterSrc\OggDecoder.cpp"
+  File "AudioTester\AudioTesterSrc\OggDecoder.h"
+  File "AudioTester\AudioTesterSrc\Resource.h"
+  File "AudioTester\AudioTesterSrc\small.ico"
+  File "AudioTester\AudioTesterSrc\stdafx.cpp"
+  File "AudioTester\AudioTesterSrc\stdafx.h"
+  File "AudioTester\AudioTesterSrc\Stream.cpp"
+  File "AudioTester\AudioTesterSrc\Stream.h"
+  File "AudioTester\AudioTesterSrc\targetver.h"
+  File "AudioTester\AudioTesterSrc\WvDecoder.cpp"
+  File "AudioTester\AudioTesterSrc\WvDecoder.h"
+
+; Shortcuts
+  !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
+  CreateShortCut "$SMPROGRAMS\HANENCIA Portable Utility\AudioTester (x86).lnk" "$INSTDIR\AudioTester\AudioTester.exe"
+  CreateShortCut "$SMPROGRAMS\HANENCIA Portable Utility\AudioTester (x64).lnk" "$INSTDIR\AudioTester\AudioTester64.exe"
+  !insertmacro MUI_STARTMENU_WRITE_END
+SectionEnd
+
+Section "Autoruns 14.11" SEC03
   SetOutPath "$INSTDIR\Autoruns"
   File "Autoruns\autoruns.chm"
   File "Autoruns\Autoruns.exe"
@@ -81,7 +121,20 @@ Section "Autoruns 14.11" SEC02
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "CCleaner 6.41" SEC03
+Section "BulkFileChanger 1.40" SEC04
+  SetOutPath "$INSTDIR\BulkFileChanger"
+  File "BulkFileChanger\BulkFileChanger.cfg"
+  File "BulkFileChanger\BulkFileChanger.chm"
+  File "BulkFileChanger\BulkFileChanger.exe"
+  File "BulkFileChanger\readme.txt"
+
+; Shortcuts
+  !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
+  CreateShortCut "$SMPROGRAMS\HANENCIA Portable Utility\BulkFileChanger.lnk" "$INSTDIR\BulkFileChanger\BulkFileChanger.exe"
+  !insertmacro MUI_STARTMENU_WRITE_END
+SectionEnd
+
+Section "CCleaner 6.41" SEC05
   SetOutPath "$INSTDIR\CCleaner"
   File "CCleaner\CCleaner.exe"
   File "CCleaner\CCleaner64.exe"
@@ -177,7 +230,7 @@ Section "CCleaner 6.41" SEC03
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "DriverStore Explorer 1.0.26" SEC04
+Section "DriverStore Explorer 1.0.26" SEC06
   SetOutPath "$INSTDIR\DriverStore Explorer"
   File "DriverStore Explorer\Rapr.exe"
   File "DriverStore Explorer\Rapr.exe.config"
@@ -189,7 +242,7 @@ Section "DriverStore Explorer 1.0.26" SEC04
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "ExecTI 1.0" SEC05
+Section "ExecTI 1.0" SEC07
   SetOutPath "$INSTDIR\ExecTI"
   File "ExecTI\ExecTI.exe"
   File "ExecTI\Winaero EULA.txt"
@@ -202,7 +255,7 @@ Section "ExecTI 1.0" SEC05
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "FFmpeg 9.0.2" SEC06
+Section "FFmpeg 9.0.2" SEC08
   SetOutPath "$INSTDIR\ffmpeg\bin"
   File "ffmpeg\bin\ffmpeg.exe"
   File "ffmpeg\bin\ffplay.exe"
@@ -261,7 +314,7 @@ Section "FFmpeg 9.0.2" SEC06
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "G Macro 2.0" SEC07
+Section "G Macro 2.0" SEC09
   SetOutPath "$INSTDIR\G Macro"
   File "G Macro\G Macro v2.0.exe"
   File "G Macro\gmc.inf"
@@ -272,7 +325,49 @@ Section "G Macro 2.0" SEC07
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "Hitomi Downloader 4.2 Technical Preview (2026-09-30)" SEC08
+Section "GoodbyeDPI 0.23 Release Candidate 3" SEC10
+  SetOutPath "$INSTDIR\GoodbyeDPI"
+  File "GoodbyeDPI\russia-blacklist.txt"
+  File "GoodbyeDPI\service_install_russia_blacklist.cmd"
+  File "GoodbyeDPI\service_install_russia_blacklist_dnsredir.cmd"
+  File "GoodbyeDPI\service_remove.cmd"
+  File "GoodbyeDPI\0_russia_update_blacklist_file.cmd"
+  File "GoodbyeDPI\1_russia_blacklist.cmd"
+  File "GoodbyeDPI\1_russia_blacklist_dnsredir.cmd"
+  File "GoodbyeDPI\1_russia_blacklist_YOUTUBE.cmd"
+  File "GoodbyeDPI\1_russia_blacklist_YOUTUBE_ALT.cmd"
+  File "GoodbyeDPI\2_any_country.cmd"
+  File "GoodbyeDPI\2_any_country_dnsredir.cmd"
+  File "GoodbyeDPI\russia-blacklist.txt"
+  File "GoodbyeDPI\russia-youtube.txt"
+  File "GoodbyeDPI\service_install_russia_blacklist.cmd"
+  File "GoodbyeDPI\service_install_russia_blacklist_dnsredir.cmd"
+  File "GoodbyeDPI\service_install_russia_blacklist_YOUTUBE.cmd"
+  File "GoodbyeDPI\service_install_russia_blacklist_YOUTUBE_ALT.cmd"
+  File "GoodbyeDPI\service_remove.cmd"
+  SetOutPath "$INSTDIR\GoodbyeDPI\licenses"
+  File "GoodbyeDPI\licenses\LICENSE-getline.txt"
+  File "GoodbyeDPI\LICENSES\LICENSE-goodbyedpi.txt"
+  File "GoodbyeDPI\licenses\LICENSE-uthash.txt"
+  File "GoodbyeDPI\licenses\LICENSE-windivert.txt"
+  SetOutPath "$INSTDIR\GoodbyeDPI\x86"
+  File "GoodbyeDPI\x86\goodbyedpi.exe"
+  File "GoodbyeDPI\x86\WinDivert.dll"
+  File "GoodbyeDPI\x86\WinDivert32.sys"
+  File "GoodbyeDPI\x86\WinDivert64.sys"
+  SetOutPath "$INSTDIR\GoodbyeDPI\x86_64"
+  File "GoodbyeDPI\x86_64\goodbyedpi.exe"
+  File "GoodbyeDPI\x86_64\WinDivert.dll"
+  File "GoodbyeDPI\x86_64\WinDivert64.sys"
+
+; Shortcuts
+  !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
+  CreateShortCut "$SMPROGRAMS\HANENCIA Portable Utility\GoodbyeDPI (x64).lnk" "$INSTDIR\GoodbyeDPI\x86_64\goodbyedpi.exe"
+  CreateShortCut "$SMPROGRAMS\HANENCIA Portable Utility\GoodbyeDPI (x86).lnk" "$INSTDIR\GoodbyeDPI\x86\goodbyedpi.exe"
+  !insertmacro MUI_STARTMENU_WRITE_END
+SectionEnd
+
+Section "Hitomi Downloader 4.2 Technical Preview (2026-09-30)" SEC11
   SetOutPath "$INSTDIR\Hitomi Downloader"
   File "Hitomi Downloader\hitomi_downloader_GUI.exe"
 
@@ -282,7 +377,7 @@ Section "Hitomi Downloader 4.2 Technical Preview (2026-09-30)" SEC08
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "Image-Health" SEC09
+Section "Image-Health" SEC12
   SetOutPath "$INSTDIR\Image-Health\BIN"
   File "Image-Health\BIN\7z.dll"
   File "Image-Health\BIN\7z.exe"
@@ -303,7 +398,7 @@ Section "Image-Health" SEC09
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "nosx" SEC10
+Section "nosx" SEC13
   SetOutPath "$INSTDIR\nosx"
   File "nosx\nosx.hta"
   File "nosx\README.markdown"
@@ -314,7 +409,7 @@ Section "nosx" SEC10
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "RemoveGhosts" SEC11
+Section "RemoveGhosts" SEC14
   SetOutPath "$INSTDIR\RemoveGhosts"
   File "RemoveGhosts\RemoveGhosts.ps1"
   File "RemoveGhosts\run.cmd"
@@ -325,7 +420,7 @@ Section "RemoveGhosts" SEC11
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "Ridirm" SEC12
+Section "Ridirm" SEC15
   SetOutPath "$INSTDIR\Ridirm"
   File "Ridirm\Ridirm.exe"
 
@@ -335,7 +430,7 @@ Section "Ridirm" SEC12
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "R-Studio Network 8.12" SEC13
+Section "R-Studio Network 8.12" SEC16
   SetOutPath "$INSTDIR\R-Studio\App\RStudio"
   File "R-Studio\App\RStudio\avcodec-57.dll"
   File "R-Studio\App\RStudio\avfilter-6.dll"
@@ -464,7 +559,7 @@ Section "R-Studio Network 8.12" SEC13
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "Rufus 4.15" SEC14
+Section "Rufus 4.15" SEC17
   SetOutPath "$INSTDIR\Rufus"
   File "Rufus\Rufus.exe"
 
@@ -474,7 +569,7 @@ Section "Rufus 4.15" SEC14
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "SpotiFLAC 7.2.2" SEC15
+Section "SpotiFLAC 7.2.2" SEC18
   SetOutPath "$INSTDIR\SpotiFLAC"
   File "SpotiFLAC\SpotiFLAC.exe"
 
@@ -520,6 +615,9 @@ SectionEnd
   !insertmacro MUI_DESCRIPTION_TEXT ${SEC13} ""
   !insertmacro MUI_DESCRIPTION_TEXT ${SEC14} ""
   !insertmacro MUI_DESCRIPTION_TEXT ${SEC15} ""
+  !insertmacro MUI_DESCRIPTION_TEXT ${SEC16} ""
+  !insertmacro MUI_DESCRIPTION_TEXT ${SEC17} ""
+  !insertmacro MUI_DESCRIPTION_TEXT ${SEC18} ""
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
 
 
@@ -660,6 +758,31 @@ Section Uninstall
   Delete "$INSTDIR\Image-Health\BIN\7z.exe"
   Delete "$INSTDIR\Image-Health\BIN\7z.dll"
   Delete "$INSTDIR\Hitomi Downloader\hitomi_downloader_GUI.exe"
+  Delete "$INSTDIR\GoodbyeDPI\x86_64\WinDivert64.sys"
+  Delete "$INSTDIR\GoodbyeDPI\x86_64\WinDivert.dll"
+  Delete "$INSTDIR\GoodbyeDPI\x86_64\goodbyedpi.exe"
+  Delete "$INSTDIR\GoodbyeDPI\x86\WinDivert64.sys"
+  Delete "$INSTDIR\GoodbyeDPI\x86\WinDivert32.sys"
+  Delete "$INSTDIR\GoodbyeDPI\x86\WinDivert.dll"
+  Delete "$INSTDIR\GoodbyeDPI\x86\goodbyedpi.exe"
+  Delete "$INSTDIR\GoodbyeDPI\licenses\LICENSE-windivert.txt"
+  Delete "$INSTDIR\GoodbyeDPI\licenses\LICENSE-uthash.txt"
+  Delete "$INSTDIR\GoodbyeDPI\licenses\LICENSE-goodbyedpi.txt"
+  Delete "$INSTDIR\GoodbyeDPI\licenses\LICENSE-GETLINE.TXT"
+  Delete "$INSTDIR\GoodbyeDPI\0_russia_update_blacklist_file.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\1_russia_blacklist.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\1_russia_blacklist_dnsredir.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\1_russia_blacklist_YOUTUBE.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\1_russia_blacklist_YOUTUBE_ALT.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\2_any_country.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\2_any_country_dnsredir.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\russia-blacklist.txt"
+  Delete "$INSTDIR\GoodbyeDPI\russia-youtube.txt"
+  Delete "$INSTDIR\GoodbyeDPI\service_install_russia_blacklist.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\service_install_russia_blacklist_dnsredir.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\service_install_russia_blacklist_YOUTUBE.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\service_install_russia_blacklist_YOUTUBE_ALT.cmd"
+  Delete "$INSTDIR\GoodbyeDPI\service_remove.cmd"
   Delete "$INSTDIR\G Macro\gmc.inf"
   Delete "$INSTDIR\G Macro\G Macro v2.0.exe"
   Delete "$INSTDIR\ffmpeg\README.txt"
@@ -798,6 +921,39 @@ Section Uninstall
   Delete "$INSTDIR\CCleaner\Lang\lang-1025.dll"
   Delete "$INSTDIR\CCleaner\CCleaner64.exe"
   Delete "$INSTDIR\CCleaner\CCleaner.exe"
+  Delete "$INSTDIR\BulkFileChanger\readme.txt"
+  Delete "$INSTDIR\BulkFileChanger\BulkFileChanger.exe"
+  Delete "$INSTDIR\BulkFileChanger\BulkFileChanger.chm"
+  Delete "$INSTDIR\BulkFileChanger\BulkFileChanger.cfg"
+  Delete "$INSTDIR\AudioTester\readme.txt"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\WvDecoder.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\WvDecoder.cpp"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\targetver.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\Stream.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\Stream.cpp"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\stdafx.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\stdafx.cpp"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\small.ico"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\Resource.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\OggDecoder.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\OggDecoder.cpp"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\MP3Decoder.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\MP3Decoder.cpp"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\md5.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\md5.c"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\FlacDecoder.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\FlacDecoder.cpp"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\Decoders.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\Decoders.cpp"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\AudioTester.vcxproj.filters"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\AudioTester.vcxproj"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\AudioTester.sln"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\AudioTester.rc"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\AudioTester.ico"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\AudioTester.h"
+  Delete "$INSTDIR\AudioTester\AudioTesterSrc\AudioTester.cpp"
+  Delete "$INSTDIR\AudioTester\AudioTester64.exe"
+  Delete "$INSTDIR\AudioTester\AudioTester.exe"
   Delete "$INSTDIR\Autoruns\Eula.txt"
   Delete "$INSTDIR\Autoruns\autorunsc64a.exe"
   Delete "$INSTDIR\Autoruns\autorunsc64.exe"
@@ -807,19 +963,25 @@ Section Uninstall
   Delete "$INSTDIR\Autoruns\Autoruns.exe"
   Delete "$INSTDIR\Autoruns\autoruns.chm"
   Delete "$INSTDIR\HangulJasoFixer2\HangulJasoFixer2.exe"
-
+  
   Delete "$SMPROGRAMS\$ICONS_GROUP\Uninstall.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\SpotiFLAC.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\Rufus.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\RStudio.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\Ridirm.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\nosx.lnk"
+  Delete "$SMPROGRAMS\HANENCIA Portable Utility\Image-Health.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\Hitomi Downloader.lnk"
+  Delete "$SMPROGRAMS\HANENCIA Portable Utility\GoodbyeDPI (x64).lnk"
+  Delete "$SMPROGRAMS\HANENCIA Portable Utility\GoodbyeDPI (x86).lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\G Macro.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\ExecTI.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\DriverStore Explorer.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\CCleaner.lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\Autoruns.lnk"
+  Delete "$SMPROGRAMS\HANENCIA Portable Utility\BulkFileChanger.lnk"
+  Delete "$SMPROGRAMS\HANENCIA Portable Utility\AudioTester (x64).lnk"
+  Delete "$SMPROGRAMS\HANENCIA Portable Utility\AudioTester (x86).lnk"
   Delete "$SMPROGRAMS\HANENCIA Portable Utility\자소 합치기2.lnk"
 
   RMDir "$SMPROGRAMS\HANENCIA Portable Utility"
@@ -851,6 +1013,10 @@ Section Uninstall
   RMDir "$INSTDIR\Image-Health"
   RMDir "$INSTDIR\Hitomi Downloader"
   RMDir "$INSTDIR\HangulJasoFixer2"
+  RMDir "$INSTDIR\GoodbyeDPI\x86_64"
+  RMDir "$INSTDIR\GoodbyeDPI\x86"
+  RMDir "$INSTDIR\GoodbyeDPI\licenses"
+  RMDir "$INSTDIR\GoodbyeDPI"
   RMDir "$INSTDIR\G Macro"
   RMDir "$INSTDIR\ffmpeg\presets"
   RMDir "$INSTDIR\ffmpeg\doc"
@@ -863,6 +1029,9 @@ Section Uninstall
   RMDir "$INSTDIR\CCleaner\x64"
   RMDir "$INSTDIR\CCleaner\Lang"
   RMDir "$INSTDIR\CCleaner"
+  RMDir "$INSTDIR\BulkFileChanger"
+  RMDir "$INSTDIR\AudioTester\AudioTesterSrc"
+  RMDir "$INSTDIR\AudioTester\"
   RMDir "$INSTDIR\Autoruns"
 
   DeleteRegKey ${PRODUCT_UNINST_ROOT_KEY} "${PRODUCT_UNINST_KEY}"
