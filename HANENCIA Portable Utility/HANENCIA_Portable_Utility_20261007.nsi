@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "HANENCIA Portable Utility"
-!define PRODUCT_VERSION "20261004"
+!define PRODUCT_VERSION "20261007"
 !define PRODUCT_PUBLISHER "HANENCIA Creative Group"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\HangulJasoFixer2.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -45,7 +45,7 @@ var ICONS_GROUP
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "HANENCIA Portable Utility 20261004 (다중 언어).exe"
+OutFile "HANENCIA Portable Utility 20261007 (다중 언어).exe"
 InstallDir "C:\Portable"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -367,7 +367,7 @@ Section "GoodbyeDPI 0.23 Release Candidate 3" SEC10
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
-Section "Hitomi Downloader 4.2 Technical Preview (2026-09-30)" SEC11
+Section "Hitomi Downloader 4.2 Technical Preview (2026-10-03)" SEC11
   SetOutPath "$INSTDIR\Hitomi Downloader"
   File "Hitomi Downloader\hitomi_downloader_GUI.exe"
 
