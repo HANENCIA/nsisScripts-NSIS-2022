@@ -2,9 +2,9 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "HANENCIA Portable Utility"
-!define PRODUCT_VERSION "20261007"
+!define PRODUCT_VERSION "20261008"
 !define PRODUCT_PUBLISHER "HANENCIA Creative Group"
-!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\HangulJasoFixer2.exe"
+!define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\uninst.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
 !define PRODUCT_STARTMENU_REGVAL "NSIS:StartMenuDir"
@@ -36,7 +36,7 @@ var ICONS_GROUP
 ; Finish page
 !insertmacro MUI_PAGE_FINISH
 
-; Uninstaller pages
+; Uninstallerpages
 !insertmacro MUI_UNPAGE_INSTFILES
 
 ; Language files
@@ -45,16 +45,16 @@ var ICONS_GROUP
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "HANENCIA Portable Utility 20261007 (다중 언어).exe"
+OutFile "HANENCIA Portable Utility 20261008 (다중 언어).exe"
 InstallDir "C:\Portable"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
 ShowUnInstDetails show
+SetOverwrite try
 RequestExecutionLevel admin
 
 Section "자소 합치기2" SEC01
   SetOutPath "$INSTDIR\HangulJasoFixer2"
-  SetOverwrite try
   File "HangulJasoFixer2\HangulJasoFixer2.exe"
 
 ; Shortcuts
@@ -1007,6 +1007,7 @@ Section Uninstall
   RMDir "$INSTDIR\R-Studio\App\RStudio\en"
   RMDir "$INSTDIR\R-Studio\App\RStudio\de"
   RMDir "$INSTDIR\R-Studio\App\RStudio"
+  RMDir "$INSTDIR\R-Studio\App"
   RMDir "$INSTDIR\R-Studio"
   RMDir "$INSTDIR\Ridirm"
   RMDir "$INSTDIR\RemoveGhosts"
