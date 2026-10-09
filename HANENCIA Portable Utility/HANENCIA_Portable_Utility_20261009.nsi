@@ -2,7 +2,7 @@
 
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "HANENCIA Portable Utility"
-!define PRODUCT_VERSION "20261008"
+!define PRODUCT_VERSION "20261009"
 !define PRODUCT_PUBLISHER "HANENCIA Creative Group"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\uninst.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
@@ -45,7 +45,7 @@ var ICONS_GROUP
 ; MUI end ------
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "HANENCIA Portable Utility 20261008 (다중 언어).exe"
+OutFile "HANENCIA Portable Utility 20261009 (다중 언어).exe"
 InstallDir "C:\Portable"
 InstallDirRegKey HKLM "${PRODUCT_DIR_REGKEY}" ""
 ShowInstDetails show
@@ -411,13 +411,13 @@ SectionEnd
 
 Section "RemoveGhosts" SEC14
   SetOutPath "$INSTDIR\RemoveGhosts"
-  File "RemoveGhosts\RemoveGhosts.exe"
+  File "RemoveGhosts\RemoveGhostsGUI.exe"
   File "RemoveGhosts\RemoveGhosts.ps1"
   File "RemoveGhosts\사용 방법.pdf"
 
 ; Shortcuts
   !insertmacro MUI_STARTMENU_WRITE_BEGIN Application
-  CreateShortCut "$SMPROGRAMS\HANENCIA Portable Utility\RemoveGhosts.lnk" "$INSTDIR\RemoveGhosts\RemoveGhosts.exe"
+  CreateShortCut "$SMPROGRAMS\HANENCIA Portable Utility\RemoveGhosts.lnk" "$INSTDIR\RemoveGhosts\RemoveGhostsGUI.exe"
   !insertmacro MUI_STARTMENU_WRITE_END
 SectionEnd
 
@@ -743,7 +743,7 @@ Section Uninstall
   Delete "$INSTDIR\R-Studio\App\RStudio\avcodec-57.dll"
   Delete "$INSTDIR\Ridirm\Ridirm.exe"
   Delete "$INSTDIR\RemoveGhosts\사용 방법.pdf"
-  Delete "$INSTDIR\RemoveGhosts\RemoveGhosts.exe"
+  Delete "$INSTDIR\RemoveGhosts\RemoveGhostsGUI.exe"
   Delete "$INSTDIR\RemoveGhosts\RemoveGhosts.ps1"
   Delete "$INSTDIR\nosx\README.markdown"
   Delete "$INSTDIR\nosx\nosx.hta"
